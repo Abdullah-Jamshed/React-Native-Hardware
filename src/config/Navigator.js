@@ -5,40 +5,50 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Home from '../screens/Home';
 import About from '../screens/About';
-import Profile from '../screens/Profile';
+import Camera from '../screens/Camera';
+import Picker from '../screens/Picker';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
-import {Animated, Text} from 'react-native';
-
-// const myIcon = <Icon name="comment" size={30} color="#900" />;
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-const HomeStack = ({navigation}) => {
+const headerStyleOption = ({route, navigation}) => {
+  return {
+    title: route.name,
+    headerRight: () => (
+      <FontAwesome
+        name="navicon"
+        size={20}
+        style={{padding: 20}}
+        color="#5a747d"
+        onPress={() => navigation.openDrawer()}
+      />
+    ),
+    headerStyle: {
+      backgroundColor: '#d1d8e3',
+    },
+  };
+};
+
+const HomeStack = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} options={headerStyleOption} />
       <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{
-          title: 'Home',
-          headerRight: () => (
-            <FontAwesome
-              name="navicon"
-              size={20}
-              style={{padding: 20}}
-              color="#5a747d"
-              onPress={() => console.log('==>>', navigation.openDrawer())}
-            />
-          ),
-          headerStyle: {
-            backgroundColor: '#d1d8e3',
-          },
-        }}
+        name="About"
+        component={About}
+        options={headerStyleOption}
       />
-      <Stack.Screen name="About" component={About} />
-      <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen
+        name="Camera"
+        component={Camera}
+        options={headerStyleOption}
+      />
+      <Stack.Screen
+        name="Picker"
+        component={Picker}
+        options={headerStyleOption}
+      />
     </Stack.Navigator>
   );
 };
@@ -48,7 +58,7 @@ const Navigator = () => {
     <NavigationContainer>
       <Drawer.Navigator>
         <Drawer.Screen name="Home" component={HomeStack} />
-        <Drawer.Screen name="Profile" component={Profile} />
+        <Drawer.Screen name="Camera" component={Camera} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
