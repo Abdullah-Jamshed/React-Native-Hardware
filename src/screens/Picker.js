@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, Image, StyleSheet} from 'react-native';
 import * as ImagePicker from 'react-native-image-picker';
 
 const options = {
@@ -12,7 +12,7 @@ const options = {
 };
 
 const Picker = () => {
-  const [response, setResponse] = React.useState(null);
+  const [response, setResponse] = useState(null);
 
   return (
     <View>
@@ -49,8 +49,41 @@ const Picker = () => {
           )
         }
       />
+
+      <View style={styles.response}>
+        <Text>Res: {JSON.stringify(response)}</Text>
+      </View>
+
+      {response && (
+        <View style={styles.image}>
+          <Image
+            style={{width: 200, height: 200}}
+            source={{uri: response.uri}}
+          />
+        </View>
+      )}
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  button: {
+    marginVertical: 24,
+    marginHorizontal: 24,
+  },
+  image: {
+    marginVertical: 24,
+    alignItems: 'center',
+  },
+  response: {
+    marginVertical: 16,
+    marginHorizontal: 8,
+  },
+});
 
 export default Picker;
