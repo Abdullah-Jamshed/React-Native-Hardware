@@ -5,7 +5,7 @@ import {LoginManager, AccessToken} from 'react-native-fbsdk';
 import auth from '@react-native-firebase/auth';
 
 const Home = ({navigation}) => {
-  // const [name, setName] = useState('');
+  const [name, setName] = useState('');
   // const [password, setPassword] = useState('');
 
   // const saveData = () => {
