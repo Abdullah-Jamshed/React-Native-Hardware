@@ -98,14 +98,14 @@ const Home = ({navigation}) => {
       <View style={styles.con2}>
         <Text>Home</Text>
         <View style={styles.btns}>
-          <Button
-            title="Image Picker"
-            onPress={() => navigation.navigate('Picker')}
-          />
           <Button title="About" onPress={() => navigation.navigate('About')} />
           <Button
             title="Camera"
             onPress={() => navigation.navigate('Camera')}
+          />
+          <Button
+            title="Image Picker"
+            onPress={() => navigation.navigate('Picker')}
           />
         </View>
       </View>
