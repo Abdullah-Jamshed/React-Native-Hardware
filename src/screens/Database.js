@@ -40,20 +40,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  btns: {
-    flexDirection: 'row',
-  },
+
   textInp: {
     borderBottomWidth: 1,
     borderBottomColor: '#333',
-    marginBottom:10
-  },
-  con2: {
-    margin: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginBottom: 10,
   },
 });
-
 
 export default Database;

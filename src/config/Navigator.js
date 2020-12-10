@@ -8,6 +8,7 @@ import About from '../screens/About';
 import Camera from '../screens/Camera';
 import Picker from '../screens/Picker';
 import Database from '../screens/Database';
+import Map from '../screens/Map';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const Stack = createStackNavigator();
@@ -63,6 +64,7 @@ const Navigator = () => {
         <Drawer.Screen name="Picker" component={Picker} />
         <Drawer.Screen name="About" component={About} />
         <Drawer.Screen name="Database" component={Database} />
+        <Drawer.Screen name="Map" component={Map} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
