@@ -91,21 +91,21 @@ const Home = ({navigation}) => {
       <Button title="Save Data" onPress={saveData} />
     </View> */}
 
-      <Button title="facebookLogin" onPress={facebookLogin} />
-
       <Button title="FirebaseFacebookLogin" onPress={onFacebookButtonPress} />
+
+      <Button title="facebookLogin" onPress={facebookLogin} />
 
       <View style={styles.con2}>
         <Text>Home</Text>
         <View style={styles.btns}>
+          <Button
+            title="Image Picker"
+            onPress={() => navigation.navigate('Picker')}
+          />
           <Button title="About" onPress={() => navigation.navigate('About')} />
           <Button
             title="Camera"
             onPress={() => navigation.navigate('Camera')}
-          />
-          <Button
-            title="Image Picker"
-            onPress={() => navigation.navigate('Picker')}
           />
         </View>
       </View>
