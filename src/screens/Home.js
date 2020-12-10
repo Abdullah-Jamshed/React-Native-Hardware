@@ -4,15 +4,8 @@ import {LoginManager, AccessToken} from 'react-native-fbsdk';
 // import database from '@react-native-firebase/database';
 import auth from '@react-native-firebase/auth';
 
-const Home = ({navigation}) => {
-  // const [name, setName] = useState('');
-  // const [password, setPassword] = useState('');
-
-  // const saveData = () => {
-  //   const user = {name, password};
-  //   database().ref().child('/users').push(user);
-  // };
-
+const Home = () => {
+  
   const facebookLogin = () => {
     LoginManager.logInWithPermissions(['public_profile']).then(
       function (result) {
@@ -72,25 +65,6 @@ const Home = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      {/* <View style={{width: '80%'}}>
-        <TextInput
-          value={name}
-          style={styles.textInp}
-          placeholder="name"
-          onChangeText={(text) => setName(text)}
-        />
-      </View>
-      <View style={{width: '80%'}}>
-        <TextInput
-          value={password}
-          style={styles.textInp}
-          placeholder="password"
-          onChangeText={(text) => setPassword(text)}
-          secureTextEntry={true}
-        />
-      <Button title="Save Data" onPress={saveData} />
-    </View> */}
-
       <View style={styles.con2}>
         <Button title="facebookLogin" onPress={facebookLogin} />
       </View>
