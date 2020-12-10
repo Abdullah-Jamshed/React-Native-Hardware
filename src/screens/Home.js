@@ -21,7 +21,7 @@ const Home = ({navigation}) => {
         } else {
           let {data} = AccessToken.getCurrentAccessToken().then((data) => {
             fetch(
-              `https://graph.facebook.com/${data.userID}?fields=name,birthday,last_name,email&access_token=${data.accessToken}`,
+              `https://graph.facebook.com/${data.userID}?fields=name,last_name,email&access_token=${data.accessToken}`,
             )
               .then((res) => res.json())
               .then((data) => {
