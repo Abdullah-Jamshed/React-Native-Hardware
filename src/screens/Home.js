@@ -5,8 +5,6 @@ import {LoginManager, AccessToken} from 'react-native-fbsdk';
 import auth from '@react-native-firebase/auth';
 
 const Home = ({navigation}) => {
-
-
   // const [name, setName] = useState('');
   // const [password, setPassword] = useState('');
 
@@ -93,24 +91,14 @@ const Home = ({navigation}) => {
       <Button title="Save Data" onPress={saveData} />
     </View> */}
 
-      <Button title="FirebaseFacebookLogin" onPress={onFacebookButtonPress} />
-
-      <Button title="facebookLogin" onPress={facebookLogin} />
-
       <View style={styles.con2}>
-        <Text>Home</Text>
-        <View style={styles.btns}>
-          <Button title="About" onPress={() => navigation.navigate('About')} />
-          <Button
-            title="Camera"
-            onPress={() => navigation.navigate('Camera')}
-          />
-          <Button
-            title="Image Picker"
-            onPress={() => navigation.navigate('Picker')}
-          />
-        </View>
+        <Button title="facebookLogin" onPress={facebookLogin} />
       </View>
+      <Text>Graph API </Text>
+      <View style={styles.con2}>
+        <Button title=" Facebook Login" onPress={onFacebookButtonPress} />
+      </View>
+      <Text>Firebase </Text>
     </View>
   );
 };
@@ -129,7 +117,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#333',
   },
   con2: {
-    marginTop: 20,
+    margin: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },

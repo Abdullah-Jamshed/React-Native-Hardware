@@ -59,6 +59,8 @@ const Navigator = () => {
       <Drawer.Navigator>
         <Drawer.Screen name="Home" component={HomeStack} />
         <Drawer.Screen name="Camera" component={Camera} />
+        <Drawer.Screen name="Picker" component={Picker} />
+        <Drawer.Screen name="About" component={About} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
