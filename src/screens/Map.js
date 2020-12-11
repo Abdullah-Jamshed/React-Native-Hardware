@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 
 const Map = () => {
+  const [mar, setMar] = useState({latitude: 24.8825467, longitude: 67.0681097});
   const [region, setRegion] = useState({
     latitude: 24.8825467,
     longitude: 67.0681097,
@@ -30,8 +31,15 @@ const Map = () => {
       <MapView
         style={styles.map}
         region={region}
-        onRegionChange={onRegionChange}
-      />
+        onRegionChange={onRegionChange}>
+
+        <Marker
+          coordinate={mar}
+          title={`Saylani`}
+          description={`Saylani discription`}
+        />
+        
+      </MapView>
     </View>
   );
 };
