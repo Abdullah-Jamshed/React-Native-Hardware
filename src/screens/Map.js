@@ -9,8 +9,8 @@ const Map = () => {
         provider={PROVIDER_GOOGLE} // remove if not using Google Maps
         style={styles.map}
         region={{
-          latitude: 24.8826638,
-          longitude: 67.0680661,
+          latitude: 24.8825467,
+          longitude: 67.0681097,
           latitudeDelta: 0.015,
           longitudeDelta: 0.0121,
         }}
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
   },
   map: {
     flex: 1,
-    backgroundColor: 'red',
     // height: 400,
     // width: 400,
     // ...StyleSheet.absoluteFillObject,
