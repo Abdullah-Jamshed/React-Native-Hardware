@@ -4,14 +4,16 @@ import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 
 const Map = () => {
+
   const [location, setLocation] = useState(null);
-  const [isGranted, setIsGranted] = useState(null);
-  const [region, setRegion] = useState({
-    latitude: 24.8825467,
-    longitude: 67.0681097,
-    latitudeDelta: 0.015,
-    longitudeDelta: 0.0121,
-  });
+
+
+  // const [region, setRegion] = useState({
+  //   latitude: 24.8825467,
+  //   longitude: 67.0681097,
+  //   latitudeDelta: 0.015,
+  //   longitudeDelta: 0.0121,
+  // });
 
   // const [marker, setMarker] = useState({
   //   latitude: 24.8825467,
@@ -21,6 +23,7 @@ const Map = () => {
   // const onRegionChange = (region) => {
   //   setRegion(region);
   // };
+
 
   useEffect(() => {
     console.log('location ===>>>', location);
@@ -55,6 +58,7 @@ const Map = () => {
 
   return (
     <View style={styles.container}>
+      {/* Fixed Location With Fixed Marker */}
       {/* <MapView
         provider={PROVIDER_GOOGLE} // remove if not using Google Maps
         style={styles.map}
@@ -101,6 +105,7 @@ const Map = () => {
           description={`Saylani discription`}
         />
       </MapView> */}
+      
     </View>
   );
 };
