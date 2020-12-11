@@ -4,20 +4,19 @@ import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
 const Map = () => {
   const [region, setRegion] = useState({
-    latitude: 37.78825,
-    longitude: -122.4324,
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0421,
+    latitude: 24.8825467,
+    longitude: 67.0681097,
+    latitudeDelta: 0.015,
+    longitudeDelta: 0.0121,
   });
 
   const onRegionChange = (region) => {
-    setRegion({region});
+    console.log(region);
+    setRegion(region);
   };
 
   return (
     <View style={styles.container}>
-
-      
       {/* <MapView
         provider={PROVIDER_GOOGLE} // remove if not using Google Maps
         style={styles.map}
@@ -29,7 +28,11 @@ const Map = () => {
         }}
       /> */}
 
-      <MapView region={region} onRegionChange={onRegionChange} />
+      <MapView
+        style={styles.map}
+        region={region}
+        onRegionChange={onRegionChange}
+      />
     </View>
   );
 };
