@@ -11,7 +11,6 @@ const Map = () => {
   });
 
   const onRegionChange = (region) => {
-    console.log(region);
     setRegion(region);
   };
 
