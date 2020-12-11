@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 
 const Map = () => {
-  // const [mar, setMar] = useState({latitude: 24.8825467, longitude: 67.0681097});
+  const [mar, setMar] = useState({latitude: 24.8825467, longitude: 67.0681097});
   const [region, setRegion] = useState({
     latitude: 24.8825467,
     longitude: 67.0681097,
@@ -11,9 +11,9 @@ const Map = () => {
     longitudeDelta: 0.0121,
   });
 
-  // const onRegionChange = (region) => {
-  //   setRegion(region);
-  // };
+  const onRegionChange = (region) => {
+    setRegion(region);
+  };
 
   return (
     <View style={styles.container}>
