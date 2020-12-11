@@ -23,14 +23,9 @@ const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
     flex: 1,
-    // justifyContent: 'flex-end',
-    // alignItems: 'center',
   },
   map: {
     flex: 1,
-    // height: 400,
-    // width: 400,
-    // ...StyleSheet.absoluteFillObject,
   },
 });
 
