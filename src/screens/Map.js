@@ -17,7 +17,9 @@ const Map = () => {
 
   return (
     <View style={styles.container}>
-      {/* <MapView
+
+      
+      <MapView
         provider={PROVIDER_GOOGLE} // remove if not using Google Maps
         style={styles.map}
         region={{
@@ -25,10 +27,15 @@ const Map = () => {
           longitude: 67.0681097,
           latitudeDelta: 0.015,
           longitudeDelta: 0.0121,
-        }}
-      /> */}
+        }}>
+        <Marker
+          coordinate={{latitude: region.latitude, longitude: region.longitude}}
+          title={`Saylani`}
+          description={`Saylani discription`}
+        />
+      </MapView>
 
-      <MapView
+      {/* <MapView
         style={styles.map}
         region={region}
         onRegionChange={onRegionChange}>
@@ -38,8 +45,7 @@ const Map = () => {
           title={`Saylani`}
           description={`Saylani discription`}
         />
-        
-      </MapView>
+      </MapView> */}
     </View>
   );
 };
